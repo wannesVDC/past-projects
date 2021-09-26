@@ -1,0 +1,107 @@
+/* Schrijf hier je CSS */
+table, td, tr{
+    
+    border: 1px solid black
+
+}
+table{
+  widows: 100%;
+  width: 20cm;
+  height: 11cm;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+/*de volgende link gebruikt voor alle td style opties (voor het vierkant maken van de cellen
+https://stackoverflow.com/questions/22835430/make-table-cells-square  */
+td {
+    text-align: center;
+    width: 63px;
+    align-content: center;
+  }
+  td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+  }
+  td .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* voor hit en miss gebruikt om een cirkel te maken
+https://www.w3schools.com/howto/howto_css_circles.asp */
+.hit:after{
+  height: 58px;
+  width: 58px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  position: middle;
+  align-self: center;
+  vertical-align: 0%;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.miss:after{
+height: 58px;
+width: 58px;
+background-color: blue;
+border-radius: 50%;
+display: inline-block;
+align-self: center;
+vertical-align: 0%;
+margin-top: 1px;
+}
+
+.sunken{
+  background-color: red;
+}
+.boat{
+  background-color: black;
+}
+.outOfFrame{
+  border: 0px;
+}
+remove{
+  border: 0px;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}

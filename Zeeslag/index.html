@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <script src="code.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+    </head>
+
+    <body>
+        <input type="button"  value="start new game" style="margin-left: 765px;margin-right: 1000px;margin-bottom: 20px;margin-top: 10px;" onclick="startGame();">
+        <input type="button" id="machineGun"  value="machine gun" onclick="activateMachineGun();">
+        <p style="margin-left: 700px; margin-bottom: 20px;" id="timer">0 hours 0 minutes 0 seconds 0 miliseconds</p>
+
+        <table id="A" style="float: left">
+            <script>
+                drawPlayingField(0);
+            </script>
+        </table>
+
+        <table id="B" style="float: left">
+            <script>
+                drawPlayingField(1);
+            </script>
+        </table>
+        <script>drawClock()</script>
+    </body>
+</html>
