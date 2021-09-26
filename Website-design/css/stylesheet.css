@@ -1,0 +1,170 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(2, 50%, 90%);
+    font-family: sans-serif;
+}
+h1{
+    display: none;
+}
+
+
+header{
+    background-color: hsl(4, 70%, 23%);
+    overflow: auto;
+}
+.navBarList{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 40px 70px;
+    grid-template-areas: "a home menu"
+                         "a info contact";
+
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+
+}
+#home{
+    grid-area: home;
+}
+#menu{
+    grid-area: menu;
+}
+#info{
+    grid-area: info;
+}
+#contact{
+    grid-area: contact;
+}
+
+
+.navButton{
+    display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 25px;
+        margin-left: 10px;
+        padding: 0px;
+        margin-top: 10px;
+}
+header li a:hover{
+    background-color: rgb(232, 150, 14);
+}
+
+.variableSize{
+    width: 80%;
+    margin-top: 10px;
+}
+.imageCenter{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+main{
+    margin-left: 40px;
+}
+
+section{
+    margin-top: 20px;
+}
+ul:not(.navBarList){
+    margin-top: 10px;
+}
+li:not(.navBarItem){
+    margin-top: 5px;
+}
+
+#logo:hover{
+    background-color: rgb(232, 150, 14);
+}
+table, tr, th{
+    border: 1px solid black;
+}
+table{
+    width: 90%;
+    margin-top: 10px;
+}
+p{
+    width: 80%;
+    margin-top: 10px;
+    font-size: 15px;
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.menuItem{
+    font-style: italic;
+    width: 90%;
+    position: relative;
+    font-size: 15px;
+    border: 1px solid hsl(4, 70%, 23%);
+    background-color: hsl(4, 70%, 23%);
+    color: white;
+    list-style-type: none;
+}
+
+.menuPrice{
+    position: absolute;
+    right: 5px;
+}
+.externeLinks{
+    border: 1px solid hsl(4, 70%, 23%);
+    background-color: hsl(4, 70%, 23%);
+    list-style-type: none;
+    color: white;
+    width: fit-content;
+    padding: 5px;
+}
+
+input, textarea{
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+#uitbaterImg{
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 1250px){
+    header{
+        display: grid;
+        grid-template-columns: auto 550px;
+        grid-template-rows: auto;
+        grid-template-areas: "logo navBar";
+    }
+    .navBarList{
+        display: flex;
+        flex-direction: row;
+        grid-area: navBar;
+    }
+
+    #logo{
+        grid-area: logo;
+        justify-self: left;
+    }
+    
+    .navButton{
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 10px;
+        padding: 16px;
+        margin-top: 10px;
+    }
+
+    .variableSize{
+        width: 1000px;
+    }
+
+
+}
